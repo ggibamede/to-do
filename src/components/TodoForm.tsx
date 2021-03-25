@@ -22,7 +22,7 @@ export function TodoForm ({addTodo}: TodoFormProps) {
 
     function postData(description : string){
         api.post("/createTodo",{
-            description: 'Varrer a casa ',
+            description
       });
     }
     
