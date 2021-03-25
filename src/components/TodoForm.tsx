@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { Input } from '../styles/TodoForm.styles';
+import api from './../api';
 
 
 interface TodoFormProps {
@@ -18,6 +19,14 @@ export function TodoForm ({addTodo}: TodoFormProps) {
         addTodo(newTodo);
         SetNewTodo("");
     }
+
+    function postData(description : string){
+        api.post("/createTodo",{
+            description: 'Varrer a casa ',
+      });
+    }
+    
+
 
     return (
         <Input>
